@@ -1,0 +1,60 @@
+.nav {
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav img {
+  width: 100%;
+}
+
+.nav-top div {
+  padding: 1vh 1vw;
+}
+
+.nav-top div:hover {
+  background-color: gray;
+}
+
+.nav-bottom {
+  width: 100%;
+  background-color: rgba(107, 218, 218, 0.386);
+  padding: 1vh 1vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-block {
+  display: flex;
+  align-items: center;
+}
+.name-block p {
+  padding: 0;
+  margin: 0;
+}
+
+.name {
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: purple;
+  font-weight: 700;
+  float: left;
+  margin-right: 1rem;
+}
+.inner-name {
+  font-size: 0.9rem;
+}
+
+.nav-bottom button {
+  background-color: rgb(68, 178, 68);
+  border: none;
+  outline: none;
+  padding: 0.4rem 2rem;
+  font-size: 1rem;
+  color: white;
+}

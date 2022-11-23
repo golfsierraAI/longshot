@@ -1,0 +1,25 @@
+.table {
+  border: 1px solid black;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  max-width: 40rem;
+  min-width: 5rem;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+th {
+  border-right: 1px solid gray;
+  font-size: 1rem;
+  background-color: rgb(207, 195, 195);
+}
+.checkbox-td {
+  border-right: 1px solid gray;
+}

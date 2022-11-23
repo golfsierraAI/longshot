@@ -1,0 +1,79 @@
+.home-root {
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto;
+}
+.home-root-upper-div {
+  display: flex;
+  height: 44vh;
+  justify-content: space-between;
+}
+
+.home-root-upper-div div {
+  width: 32vw;
+  border-radius: 1rem;
+}
+
+.home-root-upper-div p {
+  padding: 0;
+  margin: 0;
+}
+
+.heading {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.info {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px !important;
+}
+
+.home-root-upper-right-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-root-upper-right-div div {
+  flex: 1;
+  border: 1px solid rgb(202, 193, 193);
+  padding: 10px;
+}
+
+.cpcDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5rem !important;
+}
+.cpcDiv div {
+  width: 20%;
+}
+
+.volume-card {
+  border: 1px solid rgb(202, 193, 193);
+  padding: 20px;
+}
+
+.intent {
+  border-radius: 1rem;
+  max-width: 6rem;
+  padding: 0.1rem 0.3rem !important;
+}
+
+.home-bottom-div {
+  margin-top: 20px;
+}
+
+.home-bottom-div button {
+  border-radius: 0;
+  outline: none;
+  border: 1px solid gray;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
