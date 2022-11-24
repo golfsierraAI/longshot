@@ -6,6 +6,7 @@ export const DragDrop = ({ ...props }) => {
         return (
           <li
             id={index}
+            key={index}
             onDragStart={(e) => props.dragStart(e, index)}
             onDragEnter={(e) => props.dragEnter(e, index)}
             onDragEnd={props.drop}

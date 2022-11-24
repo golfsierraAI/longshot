@@ -1,17 +1,29 @@
+#columns {
+  padding: 0;
+}
 .column {
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
   cursor: move;
+  list-style-type: none;
 }
 
 .column header {
   height: 40px;
-  width: 400px;
+  width: 40%;
   color: black;
   background-color: #ccc;
   padding: 5px;
   border-bottom: 1px solid #ddd;
   border-radius: 10px;
   border: 2px solid #666666;
+}
+
+@media only screen and (max-width: 600px) {
+  .column header {
+    height: 40px;
+    width: 90%;
+    margin: auto;
+  }
 }

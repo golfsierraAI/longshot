@@ -3,7 +3,7 @@ import jsonData from "../../assets/data.json";
 import { intentMap, keywordDifficulty } from "../../helpers/helpers";
 import { DragDrop } from "../drag-n-drop";
 import "./index.css";
-import { Table } from "./table";
+import { Table } from "../table/index";
 const Home = () => {
   const [data, setData] = React.useState([]);
   const [activeRow, setActiveRow] = React.useState([]);
@@ -140,15 +140,17 @@ const Home = () => {
           {tableData.headers && (
             <>
               <Table headers={tableData.headers} data={tableData.data} />
-              <DragDrop
-                drop={drop}
-                dragEnter={dragEnter}
-                dragStart={dragStart}
-                data={tableData.data}
-              />
             </>
           )}
         </div>
+        {tableData.headers && (
+          <DragDrop
+            drop={drop}
+            dragEnter={dragEnter}
+            dragStart={dragStart}
+            data={tableData.data}
+          />
+        )}
       </div>
     )
   );
