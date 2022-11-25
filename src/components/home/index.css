@@ -65,12 +65,15 @@
   max-width: 6rem;
   padding: 0.1rem 0.3rem !important;
 }
+.buttonsWrapper {
+  margin-top: 20px;
+}
 
 .home-bottom-div {
   margin-top: 20px;
 }
 
-.home-bottom-div button {
+.buttonsWrapper button {
   border-radius: 0;
   outline: none;
   border: 1px solid gray;
@@ -94,5 +97,9 @@
   .home-bottom-div {
     overflow: auto;
     text-align: center;
+  }
+  .buttonsWrapper {
+    margin: auto;
+    margin-top: 50px;
   }
 }

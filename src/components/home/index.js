@@ -12,13 +12,7 @@ const Home = () => {
   const [tableData, setTableData] = React.useState({});
   const [defaultView, setDefaultView] = React.useState("raw_broadmatch_data");
 
-  React.useEffect(() => {
-    setData(jsonData);
-    setActiveRow(jsonData[defaultView][0]);
-    prepareTableData();
-  }, [defaultView]);
-
-  const prepareTableData = () => {
+  const prepareTableData = React.useCallback(() => {
     const tempData = {};
     tempData.headers = [
       "Keyword",
@@ -37,13 +31,19 @@ const Home = () => {
       tempData.data.push(tempItem);
     });
     setTableData(tempData);
-  };
+  }, [defaultView]);
 
-  const dragStart = (e, position) => {
+  React.useEffect(() => {
+    setData(jsonData);
+    setActiveRow(jsonData[defaultView][0]);
+    prepareTableData();
+  }, [defaultView, prepareTableData]);
+
+  const dragStart = (event, position) => {
     dragItem.current = position;
   };
 
-  const dragEnter = (e, position) => {
+  const dragEnter = (event, position) => {
     dragOverItem.current = position;
   };
 
@@ -107,7 +107,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="home-bottom-div">
+        <div className="buttonsWrapper">
           <button
             style={{
               backgroundColor:
@@ -137,6 +137,8 @@ const Home = () => {
           >
             Questions
           </button>
+        </div>
+        <div className="home-bottom-div">
           {tableData.headers && (
             <>
               <Table headers={tableData.headers} data={tableData.data} />
